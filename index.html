@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deltron News</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="toolbar">
+    <a href="index.html"><b>Deltron News</b></a>
+    <nav class="navigation">
+    </nav>
+</div>
+<div class="spacer"></div>
+<div class="article-title">
+    <button onclick="openArticle(1)"><b>NAME steps down as president of America</b></button>
+    <h4>September 15, 2051</h4>
+    <p>NAME steps down after receiving much pressure from ORG and countrywide protests calling for his resignation.</p>
+</div>
+<hr>
+<div class="article-title">
+    <button onclick="openArticle(2)"><b>my balls fell off</b></button>
+    <h4>May 2, 2050</h4>
+    <p>text here</p>
+</div>
+<div class="article" id="1">
+    <div class="spacer"></div>
+    <p>aaaaaa</p>
+</div>
+<div class="article" id="2">
+    <div class="spacer"></div>
+    <p>bbbbbb</p>
+</div>
+<hr>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+</script>
+<script>
+    function openArticle(id) {
+        let element = document.getElementById(id);
+        element.classList.toggle("active");
+        for(let i = 1; i<5; i++) {
+            let article = document.getElementById(String(i));
+            if (i === id) {
+                continue;
+            }
+            if (article.classList.contains("active")) {
+                article.classList.toggle("active");
+            }
+        }
+    }
+</script>
+</body>
+</html>
