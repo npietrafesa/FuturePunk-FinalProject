@@ -61,6 +61,11 @@ body {
     color: grey;
 }
 
+.archive {
+    margin: 1vw 35vw 1vw 8vw;
+    color: black;
+}
+
 .article button:hover {
     border-bottom: 2px solid lightgrey;
     color: lightgrey;
